@@ -23,6 +23,14 @@ export default abstract class AbstractODM<T> {
     return { id: results._id, ...obj };
   }
 
+  public async getAll(): Promise<T[]> {
+    return this.model.find();
+  }
+
+  public async getById(id: string): Promise<T | null> {
+    return this.model.findById(id);
+  }
+
   public async update(_id: string, obj: Partial<T>): Promise<T | null> {
     if (!isValidObjectId(_id)) throw Error('Invalid Mongo id');
 

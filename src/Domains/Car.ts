@@ -11,7 +11,7 @@ export default class Car {
   private seatsQty: number;
 
   constructor(data: ICar) {
-    this.id = data.id;
+    this.id = data._id || data.id;
     this.model = data.model;
     this.year = data.year;
     this.color = data.color;
