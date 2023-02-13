@@ -25,4 +25,9 @@ export default class CarService {
     const result = await carsODM.create(car);
     return this.createCarDomain(result);
   }
+
+  public async update(id: string, obj: ICar): Promise<Car | null> {
+    const updated = await carsODM.update(id, obj);
+    return this.createCarDomain(updated);
+  } 
 }
