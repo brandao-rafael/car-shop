@@ -77,7 +77,6 @@ export default class CarController {
       if (!isValidObjectId(id)) {
         return this.res.status(422).json({ message: INVALID_MONGO_ID });
       }
-
       const deleted = await this.service.delete(id);
       if (!deleted) {
         return this.res.status(404).json({ message: CAR_NOT_FOUND });

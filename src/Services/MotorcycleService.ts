@@ -30,4 +30,10 @@ export default class CarService {
     const updated = await motorcycleODM.update(id, obj);
     return this.createCarDomain(updated);
   } 
+
+  public async delete(id: string): Promise<IMotorcycle | null> {
+    const deleted = await motorcycleODM.delete(id);
+    if (!deleted) return null;
+    return deleted;
+  }
 }
