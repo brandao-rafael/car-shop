@@ -85,4 +85,68 @@ describe('Verify the endpoint /motorcycle', function () {
 
     sinon.restore();
   });
+
+  it('is possible update a car', async function () {
+    const carUpdated: IMotorcycle = {
+      id: '634852326b35b59438fbea2f',
+      model: MODEL,
+      year: 2005,
+      color: 'Yellow',
+      status: true,
+      buyValue: 30.000,
+      category: 'Street',
+      engineCapacity: 600,
+    };
+    const toUpdate: IMotorcycle = {
+      model: MODEL,
+      year: 2005,
+      color: 'Yellow',
+      status: true,
+      buyValue: 30.000,
+      category: 'Street',
+      engineCapacity: 600,
+    };
+    const carOutput: Motorcycle = new Motorcycle(carUpdated);
+    sinon.stub(Model, 'findOneAndUpdate').resolves(carOutput);
+
+    const service = new MotorcycleService();
+    const result = await service.update('634852326b35b59438fbea2f', toUpdate);
+
+    expect(result).to.be.deep.equal(carOutput);
+
+    sinon.restore();
+  });
+
+  it('is possible delete a car', async function () {
+    const deleted: IMotorcycle = {
+      id: '63ebc02e47b12a898f781498',
+      model: MODEL,
+      year: 2005,
+      color: 'Yellow',
+      status: true,
+      buyValue: 30.000,
+      category: 'Street',
+      engineCapacity: 600,
+    };
+
+    sinon.stub(Model, 'findByIdAndDelete').resolves(deleted);
+
+    const service = new MotorcycleService();
+    const result = await service.delete('63ebc02e47b12a898f781498');
+    
+    expect(result).to.be.deep.equal(deleted);
+    
+    sinon.restore();
+  });
+
+  it('returns null passing unknown id', async function () {
+    const unknownId = '63ebc02e47b12a898f781498';
+
+    sinon.stub(Model, 'findByIdAndDelete').resolves(null);
+
+    const service = new MotorcycleService();
+    const result = await service.delete(unknownId);
+
+    expect(result).to.be.equal(null);
+  });
 });
