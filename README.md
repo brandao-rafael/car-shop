@@ -51,7 +51,7 @@ npm run dev
 5. Para testar o projeto use o seguinte script no terminal do container car_shop
 
 ```
-npm run test:coverage
+npm run test:mocha
 ```
 
 ## Requisitos Técnicos:
