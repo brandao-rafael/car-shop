@@ -107,7 +107,7 @@ describe('Verify the endpoint /cars', function () {
       seatsQty: 5,
     };
     const carOutput: Car = new Car(carUpdated);
-    sinon.stub(Model, 'findOneAndUpdate').resolves(carOutput);
+    sinon.stub(Model, 'findByIdAndUpdate').resolves(carOutput);
 
     const service = new CarService();
     const result = await service.update('634852326b35b59438fbea2f', toUpdate);
@@ -118,7 +118,7 @@ describe('Verify the endpoint /cars', function () {
   });
 
   it('is possible delete a car', async function () {
-    const deleted = {
+    const deleted: ICar = {
       id: '63ebc02e47b12a898f781498',
       model: 'Gol copa',
       year: 2010,
