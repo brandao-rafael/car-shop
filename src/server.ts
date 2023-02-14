@@ -8,6 +8,5 @@ connectToDatabase()
     app.listen(PORT, () => `Running server on port: ${PORT}`);
   })
   .catch((error) => {
-    console.log(error);
     throw new Error(error.message);
   });
