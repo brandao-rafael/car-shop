@@ -1,5 +1,5 @@
 import { NextFunction, Request, Response } from 'express';
-// import { isValidObjectId } from 'mongoose';
+import { isValidObjectId } from 'mongoose';
 import IMotorcycle from '../Interfaces/IMotorcycle';
 import MotorcycleService from '../Services/MotorcycleService';
 
@@ -17,39 +17,40 @@ export default class CarController {
   }
 
   public async create() {
-    const car: IMotorcycle = this.req.body;
+    const motorcycle: IMotorcycle = this.req.body;
     try {
-      const newCar = await this.service.create(car);
-      return this.res.status(201).json(newCar);
+      const newMotorcycle = await this.service.create(motorcycle);
+      return this.res.status(201).json(newMotorcycle);
     } catch (error) {
       this.next(error);
     }
   }
 
-  // public async getAll() {
-  //   try {
-  //     const allMotorcycles = await this.service.getAll();
-  //     return this.res.status(200).json(allMotorcycles);
-  //   } catch (error) {
-  //     this.next(error);
-  //   }
-  // }
+  public async getAll() {
+    try {
+      const allMotorcycles = await this.service.getAll();
+      return this.res.status(200).json(allMotorcycles);
+    } catch (error) {
+      this.next(error);
+    }
+  }
 
-  // public async getById() {
-  //   const { id } = this.req.params;
-  //   try {
-  //     if (!isValidObjectId(id)) {
-  //       return this.res.status(422).json({ message: 'Invalid mongo id' });
-  //     }
-  //     const car = await this.service.getById(id);
-  //     if (!car) {
-  //       return this.res.status(404).json({ message: 'Car not found' });
-  //     }
-  //     return this.res.status(200).json(car);
-  //   } catch (error) {
-  //     this.next(error);
-  //   }
-  // }
+  public async getById() {
+    const { id } = this.req.params;
+    try {
+      if (!isValidObjectId(id)) {
+        return this.res.status(422).json({ message: 'Invalid mongo id' });
+      }
+      const motorcycle = await this.service.getById(id);
+      
+      if (!motorcycle) {
+        return this.res.status(404).json({ message: 'Motorcycle not found' });
+      }
+      return this.res.status(200).json(motorcycle);
+    } catch (error) {
+      this.next(error);
+    }
+  }
 
   // public async update() {
   //   const { id } = this.req.params;

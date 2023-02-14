@@ -11,15 +11,15 @@ export default class CarService {
     return null;
   }
   
-  // public async getAll(): Promise<(Motorcycle | null)[]> {
-  //   const result = await motorcycleODM.getAll();
-  //   return result.map((bike) => this.createCarDomain(bike));
-  // }
+  public async getAll(): Promise<(Motorcycle | null)[]> {
+    const result = await motorcycleODM.getAll();
+    return result.map((bike) => this.createCarDomain(bike));
+  }
 
-  // public async getById(id: string): Promise<Motorcycle | null> {
-  //   const result = await motorcycleODM.getById(id);
-  //   return this.createCarDomain(result);
-  // }
+  public async getById(id: string): Promise<Motorcycle | null> {
+    const result = await motorcycleODM.getById(id);
+    return this.createCarDomain(result);
+  }
 
   public async create(bike: IMotorcycle):Promise<Motorcycle | null> {
     const result = await motorcycleODM.create(bike);

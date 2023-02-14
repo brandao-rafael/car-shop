@@ -14,6 +14,6 @@ export default class CarsODM extends AbstractODM<IMotorcycle> {
       category: { type: String, required: true },
       engineCapacity: { type: Number, required: true },
     });
-    super(schema, 'motorcicles');
+    super(schema, 'motorcycles');
   }
 }
