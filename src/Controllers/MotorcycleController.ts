@@ -52,21 +52,21 @@ export default class CarController {
     }
   }
 
-  // public async update() {
-  //   const { id } = this.req.params;
-  //   const data = this.req.body;
-  //   try {
-  //     if (!isValidObjectId(id)) {
-  //       return this.res.status(422).json({ message: 'Invalid mongo id' });
-  //     }
-  //     const updated = await this.service.update(id, data);
-  //     if (!updated) {
-  //       return this.res.status(404).json({ message: 'Car not found' });
-  //     }
+  public async update() {
+    const { id } = this.req.params;
+    const data = this.req.body;
+    try {
+      if (!isValidObjectId(id)) {
+        return this.res.status(422).json({ message: 'Invalid mongo id' });
+      }
+      const updated = await this.service.update(id, data);
+      if (!updated) {
+        return this.res.status(404).json({ message: 'Motorcycle not found' });
+      }
 
-  //     return this.res.status(200).json(updated);
-  //   } catch (error) {
-  //     this.next(error);
-  //   }
-  // }
+      return this.res.status(200).json(updated);
+    } catch (error) {
+      this.next(error);
+    }
+  }
 }
