@@ -29,5 +29,11 @@ export default class CarService {
   public async update(id: string, obj: ICar): Promise<Car | null> {
     const updated = await carsODM.update(id, obj);
     return this.createCarDomain(updated);
-  } 
+  }
+
+  public async delete(id: string): Promise<ICar | null> {
+    const deleted = await carsODM.delete(id);
+    if (!deleted) return null;
+    return deleted;
+  }
 }

@@ -23,4 +23,9 @@ router.put(
   (req, res, next) => new CarController(req, res, next).update(),
 );
 
+router.delete(
+  '/:id',
+  (req, res, next) => new CarController(req, res, next).delete(),
+);
+
 export default router;
