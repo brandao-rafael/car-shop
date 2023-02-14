@@ -1,3 +1,5 @@
+<h1>Car Shop</h1>
+
 ## :man_technologist: Habilidades desenvolvidas - Skills developed
 * MongoDB
 * Utilização do Mongoose (ODM) para trabalhar com o banco de dados MongoDB
@@ -16,7 +18,7 @@
 * Chai.js
 * Sinon.js
 * Docker
-* OPP
+* POO
 * SOLID
 
 ## ⚙️ Como Executar
