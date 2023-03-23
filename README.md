@@ -14,9 +14,6 @@
 * TypeScript
 * Node.js
 * Express.js
-* Mocha.js
-* Chai.js
-* Sinon.js
 * Docker
 * POO
 * SOLID
