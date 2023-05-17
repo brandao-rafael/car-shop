@@ -19,6 +19,21 @@
   * OOP (Object-Oriented Programming)
   * SOLID
 
+## Description
+Car Shop is a powerful backend web application designed specifically for managing car and motorcycle inventory. It provides a comprehensive set of features and functionalities to handle various aspects of inventory management efficiently.
+
+Built with modern technologies such as Node.js, Express.js, and MongoDB, Car Shop offers a reliable and scalable backend infrastructure. It leverages the robustness of MongoDB as the database, allowing for seamless storage and retrieval of car and motorcycle data.
+
+With Car Shop, users can perform essential CRUD (Create, Read, Update, Delete) operations on car and motorcycle records. It provides intuitive and secure API endpoints that enable easy retrieval of vehicle information, addition of new vehicles, updates to existing records, and removal of outdated entries.
+
+The application follows the principles of Object-Oriented Programming (OOP) to ensure a clean and modular codebase. It adheres to the SOLID principles, promoting code reusability, maintainability, and extensibility. This design approach allows for easy integration of new features or modifications in the future.
+
+Car Shop places great emphasis on the reliability and stability of the backend system. It includes a comprehensive suite of unit tests implemented using industry-standard testing frameworks such as Mocha, Chai, and Sinon. These tests cover critical components of the application, ensuring robustness and reducing the likelihood of bugs or errors.
+
+To simplify the deployment process, Car Shop provides Docker integration. With a straightforward setup using Docker, developers can easily configure and launch the application, ensuring consistent environments across different deployments.
+
+Overall, Car Shop is a feature-rich backend web application that offers seamless car and motorcycle inventory management. Its advanced technologies, adherence to best practices, and comprehensive testing make it a reliable and efficient solution for businesses or organizations in need of a powerful backend system for managing their vehicle inventory.
+
 ## ⚙️ How to Run
 Docker must be installed.
 
@@ -75,6 +90,21 @@ npm run test:mocha
   * Docker
   * POO
   * SOLID
+
+  # Description
+Car Shop é um poderoso aplicativo web backend desenvolvido especificamente para gerenciar o inventário de carros e motocicletas. Ele oferece um conjunto abrangente de recursos e funcionalidades para lidar com vários aspectos de gerenciamento de inventário de forma eficiente.
+
+Construído com tecnologias modernas como Node.js, Express.js e MongoDB, o Car Shop oferece uma infraestrutura backend confiável e escalável. Ele aproveita a robustez do MongoDB como banco de dados, permitindo o armazenamento e recuperação de dados de carros e motocicletas de forma transparente.
+
+Com o Car Shop, os usuários podem realizar operações essenciais de CRUD (Criar, Ler, Atualizar, Excluir) em registros de carros e motocicletas. Ele fornece endpoints de API intuitivos e seguros que permitem a fácil recuperação de informações de veículos, adição de novos veículos, atualizações em registros existentes e remoção de entradas desatualizadas.
+
+O aplicativo segue os princípios da Programação Orientada a Objetos (POO) para garantir um código limpo e modular. Ele adere aos princípios SOLID, promovendo a reutilização, manutenibilidade e extensibilidade do código. Essa abordagem de design permite a integração fácil de novos recursos ou modificações no futuro.
+
+O Car Shop dá grande importância à confiabilidade e estabilidade do sistema backend. Ele inclui uma suíte abrangente de testes unitários implementados com frameworks de teste padrão do setor, como Mocha, Chai e Sinon. Esses testes abrangem componentes críticos do aplicativo, garantindo robustez e reduzindo a probabilidade de bugs ou erros.
+
+Para simplificar o processo de implantação, o Car Shop oferece integração com o Docker. Com uma configuração simples usando o Docker, os desenvolvedores podem facilmente configurar e lançar o aplicativo, garantindo ambientes consistentes em diferentes implantações.
+
+Em resumo, o Car Shop é um aplicativo web backend rico em recursos que oferece um gerenciamento de inventário de carros e motocicletas perfeito. Suas tecnologias avançadas, aderência às melhores práticas e testes abrangentes o tornam uma solução confiável e eficiente para empresas ou organizações que precisam de um sistema backend poderoso para gerenciar seu inventário de veículos.
 
   ## ⚙️ Como Executar
 
